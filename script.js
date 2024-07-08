@@ -8,12 +8,14 @@ const currentWeatherIcon = document.getElementById('CurrentWeatherIcon');
 const CurrentWeatherText = document.getElementById('currentWeatherText');
 const extendedForecast = document.getElementById('extendedForecast');
 const errorMessage = document.getElementById('errorMessage');
-
+const recentCitiesDropdown = document.getElementById('recentCities')
+const loadingMessage = document.getElementById('loadingMessage')
 
 searchBtn.addEventListener('click', () => {
     const cityName = cityInput.value.trim();
     if (cityName) {
         fetchWeatherDataByCity(cityName);
+        addCityToRecent(cityName);  // will add city to recent
     }
     else {
         showError('Please enter a city name.')
@@ -35,24 +37,36 @@ currentLocationBtn.addEventListener('click', () => {
 });
 
 
+recentCitiesDropdown.addEventListener('change', () => {
+    const cityName = recentCitiesDropdown.value;
+    fetchWeatherDataByCity(cityName);
+})
+
+
 function fetchWeatherDataByCity(city) {
 
+    showLoading();
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=5`)
         .then(response => response.json())
         .then(data => displayWeatherData(data))
         .catch(() => showError('Failed to fetch weather data.'))
+        .finally(hideLoading);
 }
 
 function fetchWeatherDataByCoordinates(latitude, longitude) {
+
+    showLoading();
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=5`)
         .then(response => response.json())
         .then(data => displayWeatherData(data))
         .catch(() => showError('Failed to fetch weather data. '))
+        .finally(hideLoading);
+
 }
 
 function displayWeatherData(data) {
     weatherData.classList.remove('hidden'); // Displaying the weather Data
-    errorMessage.classList.add('hidden'); // Removing the error message
+    errorMessage.classList.add('hidden');  
 
     locationName.textContent = `${data.location.name}, ${data.location.country}`;
     currentWeatherIcon.src = `https:${data.current.condition.icon}`;
@@ -76,3 +90,43 @@ function showError(message){
     errorMessage.textContent = message;
 }
 
+function addCityToRecent(city){
+    let recentCities = JSON.parse(localStorage.getItem('recentCities')) || [];
+
+    if(!recentCities.includes(city)) {
+        if(recentCities.length >= 5){  // maximum cities in recent will be 5
+            recentCities.pop();
+        } 
+        recentCities.unshift(city);  // adding cities
+        localStorage.setItem('recentCities',JSON.stringify(recentCities));
+        updateRecentCitiesDropdown();
+    }
+}
+
+
+function updateRecentCitiesDropdown(){
+    let recentCities = JSON.parse(localStorage.getItem('recentCities')) || [];  
+    recentCitiesDropdown.innerHTML = '<option value="">Select a recent city </option>'
+    recentCities.forEach(city => {
+        const option = document.createElement('option');
+        option.value = city;
+        option.textContent = city;
+        recentCitiesDropdown.appendChild(option);
+    });
+
+    if(recentCities.length === 0){
+        recentCitiesDropdown.classList.add('hidden')
+    }
+    else {
+        recentCitiesDropdown.classList.remove('hidden')
+    }
+}
+
+function showLoading(){
+    loadingMessage.classList.remove('hidden')
+}
+function hideLoading(){
+    loadingMessage.classList.add('hidden')
+}
+
+updateRecentCitiesDropdown();
