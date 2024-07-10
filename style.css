@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background{
+    background: url(bgImage.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+
+.blur{
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* css for desktop  */
+@media (min-width: 1025px) {
+    .grid-col-5{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+
+/* css for ipad mini */
+
+@media(min-width: 768px) and (max-width :1024px) {
+    .text-5xl{
+        font-size: 3rem;
+    }
+    .w-96{
+        width: 80%;
+    }
+    .grid-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+/* css for iphone se */
+
+@media (max-width: 375px){
+    .blur{
+        height: 100vh;
+        width: 100vw;
+    }
+}
