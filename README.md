@@ -18,7 +18,16 @@ This Weather Forecast Application provides real-time  and extended weather infor
 ## Project Structure 
 - 'index.html' - The HTML file containing the structure of the application. 
 - 'style.css' - Custom CSS file for additional styling.
-- 'script.js' - JavaScript file to handle API calls and dynamic updates to the DOM. 
+- 'script.js' - JavaScript file to handle API calls and dynamic updates to the DOM.
+
+## Project Output
+
+![Screenshot 2024-07-10 121841](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/4edd32c2-3fe8-445a-b985-93e608852714)
+
+![Screenshot 2024-07-10 122016](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/1c2846ca-4082-4f74-92e8-8966f6dffe51)
+
+
+![Screenshot 2024-07-10 122119](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/a5ac959f-fc06-4154-8750-50b072454877)
 
 ## Setup Instructions
 1. **Clone the repository**
@@ -26,4 +35,3 @@ This Weather Forecast Application provides real-time  and extended weather infor
 ```bash
 
 git clone https://github.com/ejazulhaque09/Weather-Application.git
-
