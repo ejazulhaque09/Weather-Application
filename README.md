@@ -26,3 +26,16 @@ This Weather Forecast Application provides real-time  and extended weather infor
 ```bash
 
 git clone https://github.com/ejazulhaque09/Weather-Application.git
+
+
+
+
+![Screenshot 2024-07-10 121935](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/ad626c46-6cb5-4ca8-ab7b-6abac655e24f)
+
+
+![Screenshot 2024-07-10 121841](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/464c2893-65df-45c7-bd51-b0db4711b045)
+
+![Screenshot 2024-07-10 122016](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/8ca0b1d1-608c-41aa-8a46-9cdb36e9e04e)
+
+
+![Screenshot 2024-07-10 122119](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/79ac8e47-5073-410a-8e77-bb51f8ba590a)
