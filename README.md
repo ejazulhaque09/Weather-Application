@@ -22,12 +22,14 @@ This Weather Forecast Application provides real-time  and extended weather infor
 
 ## Project Output
 
-![Screenshot 2024-07-10 121841](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/4edd32c2-3fe8-445a-b985-93e608852714)
-
-![Screenshot 2024-07-10 122016](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/1c2846ca-4082-4f74-92e8-8966f6dffe51)
+![Screenshot 2024-07-12 113144](https://github.com/user-attachments/assets/be1cee84-9932-4efe-a963-e535f4460d4c)
 
 
-![Screenshot 2024-07-10 122119](https://github.com/ejazulhaque09/Weather-Application/assets/104621468/a5ac959f-fc06-4154-8750-50b072454877)
+![Screenshot 2024-07-12 113353](https://github.com/user-attachments/assets/216ac931-54a7-4a9d-baf1-fdcf35c27097)
+
+
+![Screenshot 2024-07-12 113249](https://github.com/user-attachments/assets/8c9f8e7f-aa9f-4abc-9ffb-4344c284fd33)
+
 
 ## Setup Instructions
 1. **Clone the repository**
