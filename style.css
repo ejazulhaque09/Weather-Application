@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .background{
-    background: url(bgImage.jpg);
+    background: url(image.jpg);
     background-size:cover;
     background-position: center;
 }
