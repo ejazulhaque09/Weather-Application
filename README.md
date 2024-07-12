@@ -32,8 +32,15 @@ This Weather Forecast Application provides real-time  and extended weather infor
 
 
 ## Setup Instructions
-1. **Clone the repository**
+
+1. **Hosted Link**
+
+Link -> [Student_Registration_System](https://ejazulhaque09.github.io/Weather-Application/)
+
+2. **Clone the repository**
 
 ```bash
 
 git clone https://github.com/ejazulhaque09/Weather-Application.git
+
+
