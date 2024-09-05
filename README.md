@@ -35,7 +35,7 @@ This Weather Forecast Application provides real-time  and extended weather infor
 
 1. **Hosted Link**
 
-Link -> [Student_Registration_System](https://ejazulhaque09.github.io/Weather-Application/)
+Link -> [Weather-Application](https://ejazulhaque09.github.io/Weather-Application/)
 
 2. **Clone the repository**
 
